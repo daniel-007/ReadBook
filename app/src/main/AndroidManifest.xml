@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2016 JustWayward Team
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xyu.reader">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name="com.xyu.reader.ReaderApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:replace="android:allowBackup, android:icon, android:theme, android:label">
+        <activity
+            android:name="com.xyu.reader.ui.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.xyu.reader.ui.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.SearchByAuthorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.BookDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.BooksByTagActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.ReadActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.xyu.reader.ui.activity.BookSourceActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.xyu.reader.ui.activity.ReadPDFActivity">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/pdf" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xyu.reader.ui.activity.ReadEPubActivity">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/epub+zip" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xyu.reader.ui.activity.ReadCHMActivity">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/mshelp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.xyu.reader.ui.activity.TopCategoryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.SubCategoryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.SubjectBookListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.SubjectBookListDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.TopRankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.SubRankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.SubOtherHomeRankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.BookDiscussionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.BookReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.BookHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.BookDiscussionDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.BookReviewDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.BookHelpDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.BookDetailCommunityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.GirlBookDiscussionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.MyBookListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.ScanLocalBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.WifiBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xyu.reader.ui.activity.FeedbackActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.xyu.reader.service.DownloadBookService" />
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1105670298" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+
+</manifest>
