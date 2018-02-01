@@ -6,7 +6,7 @@
 
 
 ## 项目
-项目基于RxJava + Retrofit2 + Dagger2，结合MVP模式开发，代码结构清晰。项目中的API均来自追书神器，
+项目基于RxJava + Retrofit2 + Dagger2，结合MVP模式开发，代码结构清晰。项目中的API均来自追书神器。
 
 ## 截图
 
